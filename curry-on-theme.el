@@ -1,4 +1,4 @@
-;;; curry-on-desat-theme.el --- A low contrast color theme
+;;; curry-on-theme.el --- A low contrast color theme
 
 ;; Copyright © 2019 Martín Varela
 ;; Copyright (C) 2011016 Bozhidar Batsov (zenburn-theme.el)
@@ -22,8 +22,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
+;; A punchy, blue-orange-cream theme for Emacs
 ;;; Credits:
-
 ;; This code is based off my Sunburn theme, which in turn is based off Bozhidar
 ;; Batsov's port of the Zenburn theme
 
@@ -1377,7 +1377,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'curry-on)
+(provide-theme 'curry-on-theme)
 
 ;; Local Variables:
 ;; no-byte-compile: t
