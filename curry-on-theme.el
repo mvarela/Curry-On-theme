@@ -1370,7 +1370,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(vc-annotate-background ,curry-on-bg)
    ))
 
-;;;###autoload
+;;; autoload
 (and load-file-name
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
