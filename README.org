@@ -1,0 +1,70 @@
+#+TITLE: README
+#+DATE: <2019-04-23 Mon>
+#+AUTHOR: Martín Varela
+#+EMAIL: martin@varela.fi
+#+LANGUAGE: en
+
+* Curry-On Theme for Emacs
+** Overview
+I got inspired (read, blatantly stole) the main colors for this theme from a
+talk I saw from a past [[www.curry-on.org/2019/][/Curry On!/ conference]]. Some of the original colors I
+picked up from the talk's video didn't work so well (e.g., the teal I tried to
+use for green was not really readable), and the foreground color was a bit too
+contrasty, so I tweaked them a bit.
+
+I tried to keep it clean for coding, without too much noise.
+
+There is also a set of =urxvt= colors defined in the [[dotXdefaults]] file, which
+can be used to make =urxvt= match this theme. 
+
+#+NAME: fig:palette
+#+CAPTION: Curry-On palette
+#+ATTR_ORG: :width 60
+#+ATTR_HTML: :width 60px
+[[file:./img/palette.png]]
+
+
+In use, it looks like this:
+
+
+#+NAME: fig:screen1
+#+CAPTION: Org-mode / Clojure
+#+ATTR_ORG: :width 800
+#+ATTR_HTML: :width 800px
+[[file:./img/screen1.png]]
+
+
+#+NAME: fig:screen2
+#+CAPTION: Emacs lisp / LaTeX
+#+ATTR_ORG: :width 800
+#+ATTR_HTML: :width 800px
+[[file:./img/screen2.png]]
+
+
+** Installation
+
+ You can install it either from MELPA, or alternatively:
+
+#+BEGIN_SRC emacs-lisp :exports code :results silent
+  (add-to-list 'custom-theme-load-path "path/where/you/put/the/theme/")
+  (load-theme 'curry-on)
+#+END_SRC
+
+
+** License
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+© 2019, Martín Varela (martin@varela.fi)
