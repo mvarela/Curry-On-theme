@@ -1,12 +1,12 @@
 ;;; curry-on-theme.el --- A low contrast color theme
 
-;; Copyright © 2019 Martín Varela
+;; Copyright © 2019-2021 Martín Varela
 ;; Copyright (C) 2011016 Bozhidar Batsov (zenburn-theme.el)
 
 ;; Author: Martín Varela (martin@varela.fi)
 ;; URL: http://github.com/mvarela/Curry-On-Theme
 ;; Version: 1.0
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@
 
 ;;; Color Palette
 
-(defvar curry-on-default-colors-alist
+(defvar curry-on-theme-default-colors-alist
   '(("curry-on-fg+1"     . "#edecc9")
     ("curry-on-fg"       . "#fdfcd9")
     ("curry-on-bg"       . "#302e40")
@@ -52,17 +52,17 @@ Each element has the form (NAME . HEX).
 `+N' suffixes indicate a color is lighter.
 `-N' suffixes indicate a color is darker.")
 
-(defvar curry-on-override-colors-alist
+(defvar curry-on-theme-override-colors-alist
   '()
   "Place to override default theme colors.
 
 You can override a subset of the theme's default colors by
 defining them in this alist before loading the theme.")
 
-(defvar curry-on-colors-alist
-  (append curry-on-default-colors-alist curry-on-override-colors-alist))
+(defvar curry-on-theme-colors-alist
+  (append curry-on-theme-default-colors-alist curry-on-theme-override-colors-alist))
 
-(defmacro curry-on-with-color-variables (&rest body)
+(defmacro curry-on-theme-with-color-variables (&rest body)
   "`let' bind all colors defined in `curry-on-colors-alist' around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
   (declare (indent 0))
@@ -1328,8 +1328,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                                             :underline t :overline t))))
 ;;;;; yascroll
    `(yascroll:thumb-text-area ((t (:background ,curry-on-bg))))
-   `(yascroll:thumb-fringe ((t (:background ,curry-on-bg :foreground ,curry-on-bg))))
-   ))
+   `(yascroll:thumb-fringe ((t (:background ,curry-on-bg :foreground ,curry-on-bg))))))
 
 ;;; Theme Variables
 (curry-on-with-color-variables
@@ -1367,8 +1366,7 @@ Also bind `class' to ((class color) (min-colors 89))."
        (340. . ,curry-on-blue)
        (360. . ,curry-on-magenta)))
    `(vc-annotate-very-old-color ,curry-on-magenta)
-   `(vc-annotate-background ,curry-on-bg)
-   ))
+   `(vc-annotate-background ,curry-on-bg)))
 
 ;;; autoload
 (and load-file-name
@@ -1377,7 +1375,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'curry-on-theme)
+(provide 'curry-on-theme)
+(provide-theme 'curry-on)
 
 ;; Local Variables:
 ;; no-byte-compile: t
