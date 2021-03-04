@@ -69,11 +69,11 @@ Also bind `class' to ((class color) (min-colors 89))."
   `(let ((class '((class color) (min-colors 89)))
          ,@(mapcar (lambda (cons)
                      (list (intern (car cons)) (cdr cons)))
-                   curry-on-colors-alist))
+                   curry-on-theme-colors-alist))
      ,@body))
 
 ;;; Theme Faces
-(curry-on-with-color-variables
+(curry-on-theme-with-color-variables
   (custom-theme-set-faces
    'curry-on
 ;;;; Built-in
@@ -1331,7 +1331,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(yascroll:thumb-fringe ((t (:background ,curry-on-bg :foreground ,curry-on-bg))))))
 
 ;;; Theme Variables
-(curry-on-with-color-variables
+(curry-on-theme-with-color-variables
   (custom-theme-set-variables
    'curry-on
 ;;;;; ansi-color
