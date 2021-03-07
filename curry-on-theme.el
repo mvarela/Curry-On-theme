@@ -4,7 +4,7 @@
 ;; Copyright (C) 2011016 Bozhidar Batsov (zenburn-theme.el)
 
 ;; Author: Martín Varela (martin@varela.fi)
-;; URL: http://github.com/mvarela/Curry-On-Theme
+;; URL: https://github.com/mvarela/Curry-On-Theme
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -19,7 +19,7 @@
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 ;; A punchy, blue-orange-cream theme for Emacs
