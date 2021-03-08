@@ -32,8 +32,8 @@
 (deftheme curry-on "The Curry-On color theme")
 
 ;;; Color Palette
-
-(defvar curry-on-theme-default-colors-alist
+(eval-when-compile
+ (defvar curry-on-theme-default-colors-alist
   '(("curry-on-fg+1"     . "#edecc9")
     ("curry-on-fg"       . "#fdfcd9")
     ("curry-on-bg"       . "#302e40")
@@ -58,9 +58,9 @@ Each element has the form (NAME . HEX).
 
 You can override a subset of the theme's default colors by
 defining them in this alist before loading the theme.")
-
 (defvar curry-on-theme-colors-alist
-  (append curry-on-theme-default-colors-alist curry-on-theme-override-colors-alist))
+  (append curry-on-theme-default-colors-alist curry-on-theme-override-colors-alist)))
+
 
 (defmacro curry-on-theme-with-color-variables (&rest body)
   "`let' bind all colors defined in `curry-on-colors-alist' around BODY.
