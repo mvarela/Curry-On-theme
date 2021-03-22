@@ -57,7 +57,8 @@ Each element has the form (NAME . HEX).
   "Place to override default theme colors.
 
 You can override a subset of the theme's default colors by
-defining them in this alist before loading the theme.")
+defining them in this alist before loading the theme.
+Please note that this won't work if you compile this file.")
 (defvar curry-on-theme-colors-alist
   (append curry-on-theme-default-colors-alist curry-on-theme-override-colors-alist)))
 
